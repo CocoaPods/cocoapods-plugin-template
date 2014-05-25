@@ -14,7 +14,9 @@ module Pod
           Longer description of ${PLUGIN_NAME}.
         DESC
 
-        self.arguments = 'NAME'
+        self.arguments = [
+          CLAide::Argument('NAME', true)
+        ]
 
         def initialize(argv)
           @name = argv.shift_argument
